@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>El Tigre Barber House — Lucas Picón | Barbearia em Amparo-SP</title>
+    <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta
+        content="El Tigre Barber House — Lucas Picón. Cortes clássicos e modernos, barboterapia, tintura, botox capilar e muito mais em Amparo-SP. Mais de 16 anos de experiência. Agende já!"
+        name="description">
+    <meta
+        content="barbearia Amparo SP, corte de cabelo, barboterapia, barbearia clássica, botox capilar, tintura, Lucas Picón, El Tigre Barber House, barbeiro Amparo, amplo atendimento"
+        name="keywords">
+    <meta content="Lucas Picón — El Tigre Barber House Studio" name="author">
+    <!-- Open Graph -->
+    <meta property="og:title" content="El Tigre Barber House — Lucas Picón">
+    <meta property="og:description"
+        content="Mais de 16 anos de experiência em cortes clássicos e modernos, barboterapia e muito mais. Atendimento personalizado em Amparo-SP.">
+    <meta property="og:type" content="website">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS Files
+    ================================================== -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/mdb.min.css" rel="stylesheet" type="text/css" id="mdb">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+
+    <style>
+        /* ===== LP Smooth Scroll ===== */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ===== LP Navigation anchors fix ===== */
+        .lp-anchor {
+            display: block;
+            position: relative;
+            top: -80px;
+            visibility: hidden;
+        }
+
+        /* ===== LP Stats Counter ===== */
+        .lp-stats {
+            padding: 60px 0;
+        }
+
+        .lp-stat-item {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .lp-stat-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .lp-stat-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: .7;
+        }
+
+        /* ===== LP Profissional Section ===== */
+        .lp-profissional-box {
+            max-width: 380px;
+            margin: 0 auto;
+        }
+
+        .lp-profissional-bio {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ===== LP Pricing Compact ===== */
+        .lp-pricing .sc-wrap {
+            margin-bottom: 0;
+        }
+
+        .lp-pricing .def-list-dots dl {
+            margin-bottom: 6px;
+        }
+
+        /* ===== LP Contact Info Icons ===== */
+        .lp-contact-info-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .lp-contact-info-item {
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .lp-contact-info-item i {
+            font-size: 36px;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .lp-contact-info-item .lp-ci-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: .6;
+            margin-bottom: 4px;
+        }
+
+        .lp-contact-info-item .lp-ci-value {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* ===== LP Gallery uniform height ===== */
+        #gallery-lp .de-image-hover img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        /* ===== LP Testimonials — Equal Height ===== */
+        .lp-testi-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .lp-testi-grid>[class*="col-"] {
+            display: flex;
+        }
+
+        .lp-testi-grid .de_testi {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .lp-testi-grid .de_testi blockquote {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .lp-testi-grid .de_testi blockquote p {
+            flex: 1;
+        }
+
+        /* ===== LP Horário + Localização — Equal Height ===== */
+        .lp-info-row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .lp-info-row>[class*="col-"] {
+            display: flex;
+        }
+
+        .lp-info-row .d-sch-table {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        /* ===== LP Smooth Header Transition (fix flicker) ===== */
+        /* Make header always fixed to avoid position: absolute → fixed jump */
+        header.header-center {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease !important;
+            will-change: background, box-shadow;
+        }
+
+        header.header-center.transparent:not(.smaller) {
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+
+        /* Mobile: dark header background always */
+        header.header-center.header-mobile.transparent {
+            background: #101010 !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .3) !important;
+        }
+
+        /* Hero video dark overlay — make text readable */
+        #de-carousel .mask {
+            background: rgba(0, 0, 0, .75) !important;
+        }
+
+        /* Fix: show #logo (inline with menu) on desktop at all times; hide #logo-center */
+        @media (min-width: 992px) {
+            header.header-center #logo-center {
+                display: none !important;
+            }
+
+            header.header-center #logo {
+                display: block !important;
+            }
+
+            /* Match normal header logo size to smaller (fixed) header */
+            header.header-center:not(.smaller) div#logo img.logo-main {
+                max-height: 45px !important;
+                height: 45px !important;
+            }
+
+            header.header-center:not(.smaller) div#logo .logo-text {
+                font-size: 26px !important;
+            }
+
+            header.header-center:not(.smaller) div#logo .logo-sub {
+                font-size: 10px !important;
+            }
+
+            /* Logo absolute left, menu truly centered */
+            header.header-center .container {
+                position: relative !important;
+            }
+
+            header.header-center .de-flex {
+                justify-content: center !important;
+            }
+
+            header.header-center .de-flex>.de-flex-col:first-child {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            header.header-center .de-flex>.de-flex-col:last-child {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        /* On scroll (smaller), keep #logo visible and #logo-center hidden (already handled) */
+        header.smaller.header-center #logo {
+            display: block !important;
+        }
+
+        header.smaller.header-center #logo-center {
+            display: none !important;
+        }
+
+        /* Fix: prevent header from hiding on scroll (scroll-down/scrollOff/autoshow) */
+        header.header-center.scroll-down {
+            transform: none !important;
+        }
+
+        header.autoshow.scrollOff {
+            transform: none !important;
+        }
+
+        header.header-center #logo-center {
+            transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.35s ease,
+                max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            max-height: 120px;
+        }
+
+        header.smaller.header-center #logo-center {
+            padding-top: 0;
+            max-height: 0;
+            opacity: 0;
+        }
+
+        header.header-center .de-flex {
+            transition: padding 0.3s ease;
+        }
+
+        /* Ensure content doesn't hide behind the fixed header */
+        #content {
+            padding-top: 0;
+        }
+
+        /* ===== LP Mobile CTA — "Agendar Agora" button ===== */
+
+        /* Desktop: show CTA next to menu */
+        .lp-mobile-cta {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary-color, #cf814d);
+            color: #fff !important;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 0;
+            font-family: 'Oswald', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            transition: background 0.3s ease, transform 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .lp-mobile-cta:hover {
+            background: #b86e3f;
+            transform: scale(1.05);
+            color: #fff !important;
+        }
+
+        .lp-mobile-cta i {
+            font-size: 14px;
+        }
+
+        /* Mobile overrides */
+        @media (max-width: 992px) {
+            #menu-btn {
+                display: none !important;
+            }
+
+            /* Shrink logo on mobile to make room for CTA button */
+            header.header-mobile #logo img.logo-main {
+                max-height: 32px !important;
+                height: 32px !important;
+            }
+
+            header.header-mobile #logo .logo-text {
+                font-size: 18px !important;
+            }
+
+            header.header-mobile #logo .logo-sub {
+                font-size: 8px !important;
+            }
+
+            .lp-mobile-cta {
+                margin-top: 4px;
+            }
+        }
+
+        /* ===== LP WhatsApp Float Button ===== */
+        .lp-whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #fff;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, .4);
+            transition: transform .3s ease, box-shadow .3s ease;
+            text-decoration: none;
+        }
+
+        .lp-whatsapp-float:hover {
+            transform: scale(1.12);
+            box-shadow: 0 6px 28px rgba(37, 211, 102, .55);
+            color: #fff;
+        }
+
+
+        /* ===== LP Section divider ornament ===== */
+        .lp-section-intro {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+
+        /* ===== LP Uniform Section Spacing ===== */
+        section {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        section.no-top {
+            padding-top: 0;
+        }
+
+        section.no-bottom {
+            padding-bottom: 0;
+        }
+
+        /* ===== LP Pricing equal-height tables ===== */
+        .lp-pricing .row.g-4>[class*="col-"] {
+            display: flex;
+        }
+
+        .lp-pricing .row.g-4>[class*="col-"]>.d-sch-table {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .lp-pricing .row.g-4>[class*="col-"]>.d-sch-table .sc-wrap {
+            flex: 1;
+        }
+
+        /* ===== Logo hover animation ===== */
+        header .logo-main,
+        .footer-logo,
+        .fsousa-credit img {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        header .logo-main:hover,
+        .footer-logo:hover,
+        .fsousa-credit img:hover {
+            transform: scale(1.05);
+            opacity: 0.85;
+        }
+
+        /* ===== Hero Buttons ===== */
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 991px) {
+            .lp-info-row {
+                flex-direction: column;
+            }
+
+            .lp-info-row>[class*="col-"] {
+                margin-bottom: 30px;
+            }
+
+            /* Keep logo-main visible on mobile (no separate mobile logo) */
+            header .logo-main {
+                display: block !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            /* --- Hero: prevent text clipping --- */
+            .v-center {
+                display: block !important;
+                overflow-y: auto;
+                min-height: 100vh;
+                padding-top: 0;
+                padding-bottom: 40px;
+            }
+
+            #de-carousel .d-content {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            #de-carousel .wm.wm-carousel {
+                font-size: 24px !important;
+                letter-spacing: 2px;
+            }
+
+            #de-carousel h1 {
+                font-size: 32px !important;
+                line-height: 1.3 !important;
+            }
+
+            #de-carousel .lead {
+                font-size: 15px !important;
+                line-height: 1.6 !important;
+            }
+
+            #de-carousel .col-lg-6.offset-lg-3 {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            #de-carousel img[alt="El Tigre Barber House Studio"] {
+                max-width: 260px !important;
+                margin: 20px 0 16px !important;
+            }
+
+            .spacer-double {
+                height: 20px !important;
+            }
+
+            /* --- Section spacing consistency --- */
+            section {
+                padding-top: 50px !important;
+                padding-bottom: 50px !important;
+            }
+
+            section.pt80 {
+                padding-top: 50px !important;
+            }
+
+            /* --- Gradient edges: reduce overlap between adjacent jarallax sections --- */
+            .de-gradient-edge-top,
+            .de-gradient-edge-bottom {
+                height: 15% !important;
+            }
+
+            /* --- Stats section --- */
+            .lp-stats {
+                padding: 30px 0 !important;
+            }
+
+            .lp-stat-number {
+                font-size: 36px;
+            }
+
+            .lp-stat-label {
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
+
+            /* --- Marquee: tame the massive font size --- */
+            .de-marquee-list .d-item-txt {
+                font-size: 48px !important;
+            }
+
+            .de-marquee-list .d-item-block {
+                width: 24px !important;
+                transform: translateY(-14px) !important;
+            }
+
+            /* --- Gallery: better image height on small screens --- */
+            #gallery-lp .de-image-hover img {
+                height: 200px !important;
+            }
+
+            #gallery-lp {
+                margin-left: -6px !important;
+                margin-right: -6px !important;
+            }
+
+            #gallery-lp .col-md-4 {
+                padding-left: 6px !important;
+                padding-right: 6px !important;
+            }
+
+            /* --- Services cards: stack nicely --- */
+            .lp-pricing .row.g-4>[class*="col-"] {
+                margin-bottom: 30px;
+            }
+
+            /* --- Container breathing room --- */
+            .container {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            /* --- Testimonials --- */
+            .lp-testi-grid {
+                flex-direction: column;
+            }
+
+            /* --- Contact info grid --- */
+            .lp-contact-info-grid {
+                gap: 20px;
+            }
+
+            /* --- Spacers: reduce globally on mobile --- */
+            .spacer-single {
+                height: 20px !important;
+            }
+
+            /* --- Section intro text --- */
+            .lp-section-intro p {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            /* --- Professional section image --- */
+            .lp-profissional-box {
+                max-width: 300px !important;
+                margin-bottom: 30px;
+            }
+
+            /* --- WhatsApp float button --- */
+            .lp-whatsapp-float {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 24px !important;
+                bottom: 16px !important;
+                right: 16px !important;
+            }
+
+            /* --- Fix: jarallax background images don't cause horizontal scroll --- */
+            .jarallax-img {
+                position: relative !important;
+            }
+
+            /* --- Marquee section padding --- */
+            .de-marquee-list {
+                padding: 20px 0 !important;
+            }
+
+            /* --- Pricing section title --- */
+            .lp-pricing h3 {
+                font-size: 20px !important;
+            }
+
+            /* --- Sobre section lead text --- */
+            p.lead.big {
+                font-size: 18px !important;
+                line-height: 1.6 !important;
+            }
+
+            /* --- Footer spacing --- */
+            footer {
+                padding: 40px 0 !important;
+            }
+
+            /* --- Schedule table content --- */
+            .d-sch-table .d-content {
+                font-size: 18px !important;
+            }
+
+            /* --- Pricing cards: fix table layout on mobile --- */
+            .lp-pricing .def-list-dots {
+                padding-left: 0 !important;
+                font-size: 14px !important;
+                line-height: 1.4 !important;
+                text-align: center !important;
+            }
+
+            .lp-pricing .def-list-dots dl {
+                display: block !important;
+                width: 100% !important;
+                margin: 0 0 12px 0 !important;
+                padding: 0 0 8px 0 !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                table-layout: fixed !important;
+            }
+
+            .lp-pricing .def-list-dots dl:last-child {
+                border-bottom: none !important;
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
+            }
+
+            .lp-pricing .def-list-dots dt {
+                display: block !important;
+                width: auto !important;
+                max-width: 100% !important;
+                overflow: visible !important;
+                font-weight: 400 !important;
+                line-height: 1.4 !important;
+                height: auto !important;
+            }
+
+            .lp-pricing .def-list-dots dt:after,
+            .lp-pricing .def-list-dots dt span:after {
+                content: "" !important;
+                display: none !important;
+                width: auto !important;
+            }
+
+            .lp-pricing .def-list-dots dt span {
+                display: inline !important;
+                font-weight: 400 !important;
+            }
+
+            .lp-pricing .def-list-dots dd {
+                display: block !important;
+                width: auto !important;
+                margin: 2px 0 0 0 !important;
+                padding: 0 !important;
+                white-space: normal !important;
+                font-weight: 600 !important;
+                font-size: 13px !important;
+                opacity: 0.8;
+                height: auto !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            /* --- Ultra-small screens --- */
+            .v-center {
+                padding: 100px 0 40px !important;
+            }
+
+            #de-carousel .wm.wm-carousel {
+                font-size: 18px !important;
+            }
+
+            #de-carousel h1 {
+                font-size: 26px !important;
+            }
+
+            #de-carousel .lead {
+                font-size: 14px !important;
+            }
+
+            #de-carousel .btn-main {
+                display: block;
+                width: 100%;
+                margin: 8px 0 !important;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #de-carousel img[alt="El Tigre Barber House Studio"] {
+                max-width: 200px !important;
+            }
+
+            .lp-stat-number {
+                font-size: 30px;
+            }
+
+            .de-marquee-list .d-item-txt {
+                font-size: 36px !important;
+            }
+
+            #gallery-lp .de-image-hover img {
+                height: 160px !important;
+            }
+
+            section {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+
+            .container {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark-scheme">
+    <div id="wrapper">
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+        <!-- header begin -->
+        <header class="header-center transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo-center">
+                            <a href="#hero">
+                                <img class="logo-main" src="images/logo.png" alt="El Tigre">
+                                <span class="logo-text">El Tigre<span class="logo-sub">Barber House Studio</span></span>
+                            </a>
+                        </div>
+                        <!-- logo close -->
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <div class="de-flex-col">
+                                    <!-- logo begin -->
+                                    <div id="logo">
+                                        <a href="#hero">
+                                            <img class="logo-main" src="images/logo.png" alt="El Tigre">
+                                            <span class="logo-text">El Tigre<span class="logo-sub">Barber House
+                                                    Studio</span></span>
+                                        </a>
+                                    </div>
+                                    <!-- logo close -->
+                                </div>
+                            </div>
+                            <div class="de-flex-col header-col-mid">
+                                <ul id="mainmenu" class="s2">
+                                    <li><a class="menu-item" href="#sobre">Sobre</a></li>
+                                    <li><a class="menu-item" href="#servicos">Serviços</a></li>
+                                    <li><a class="menu-item" href="#galeria">Galeria</a></li>
+                                    <li><a class="menu-item" href="#depoimentos">Depoimentos</a></li>
+                                    <li><a class="menu-item" href="#contato">Contato</a></li>
+                                </ul>
+                            </div>
+                            <div class="de-flex-col">
+                                <div class="menu_side_area">
+                                    <span id="menu-btn"></span>
+                                    <a href="https://wa.me/5511955005110" target="_blank" class="lp-mobile-cta" title="Agendar Agora">
+                                        <i class="fa fa-calendar"></i> Agendar Agora
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <!-- ============================================================ -->
+            <!-- HERO — Video Background (from index-2.html) -->
+            <!-- ============================================================ -->
+            <span class="lp-anchor" id="hero"></span>
+            <section id="de-carousel" class="no-top no-bottom carousel slide text-light carousel-fade"
+                data-mdb-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active jarallax" data-video-src="mp4:video/local-video-1.mp4">
+                        <div class="mask">
+                            <div class="d-content relative z1000">
+                                <div class="wm wm-carousel">
+                                    <div class="wow fadeInRight">studio <span class="s1">el tigre</span> barber <span
+                                            class="s1">house</span></div>
+                                </div>
+                                <div class="v-center">
+                                    <div class="container z1000">
+                                        <div class="row align-items-center text-center">
+                                            <div class="spacer-double"></div>
+
+                                            <div class="col-lg-12 text-center">
+                                                <img src="images/lucas.png" alt="El Tigre Barber House Studio"
+                                                    class="img-fluid" style="max-width: 380px; margin: 40px 0 30px;">
+                                                <h1>Tradição e Modernidade na Cadeira do Lucas</h1>
+                                            </div>
+
+                                            <div class="col-lg-6 offset-lg-3">
+                                                <p class="lead">Mais de 16 anos de experiência em cortes clássicos e
+                                                    modernos, barboterapia e muito mais. Atendimento personalizado em
+                                                    Amparo-SP.</p>
+                                                <div class="hero-buttons">
+                                                    <a class="btn-main" href="#servicos">Nossos Serviços</a>
+                                                    <a class="btn-main" href="https://wa.me/5511955005110"
+                                                        target="_blank"
+                                                        style="background:transparent; border:2px solid #fff;">Agendar
+                                                        Agora</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="de-gradient-edge-bottom"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- STATS — Counters (unique to LP) -->
+            <!-- ============================================================ -->
+            <section class="no-top no-bottom lp-stats">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-6">
+                            <div class="lp-stat-item wow fadeInUp" data-wow-delay=".0s">
+                                <div class="lp-stat-number id-color">16+</div>
+                                <div class="lp-stat-label">Anos de Experiência</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="lp-stat-item wow fadeInUp" data-wow-delay=".1s">
+                                <div class="lp-stat-number id-color">6</div>
+                                <div class="lp-stat-label">Categorias de Serviço</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="lp-stat-item wow fadeInUp" data-wow-delay=".2s">
+                                <div class="lp-stat-number id-color">19</div>
+                                <div class="lp-stat-label">Serviços Disponíveis</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <div class="lp-stat-item wow fadeInUp" data-wow-delay=".3s">
+                                <div class="lp-stat-number id-color">100%</div>
+                                <div class="lp-stat-label">Atendimento Pessoal</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- SOBRE — About + Vision + Mission (from sobre.html) -->
+            <!-- ============================================================ -->
+            <span class="lp-anchor" id="sobre"></span>
+            <section aria-label="section" class="pt80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12" data-jarallax-element="-50">
+                            <p class="lead big wow fadeInUp">O El Tigre não é uma barbearia comum — é um espaço pensado
+                                para quem valoriza tradição, qualidade e atendimento de verdade. Atendimento personalizado em ambiente acolhedor, seguindo a linha clássica da barbearia com técnicas modernas. Aqui, o
+                                tempo passa de outro jeito: você senta, toma um café, conversa com o Lucas e sai de lá
+                                se sentindo outra pessoa. Tudo em Amparo-SP.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="jarallax no-top">
+                <div class="de-gradient-edge-top"></div>
+                <img src="images/background/1.jpg" class="jarallax-img" alt="">
+                <div class="container relative z1000">
+                    <div class="row gx-5">
+                        <div class="col-lg-6" data-jarallax-element="-50">
+                            <div class="d-sch-table">
+                                <h2 class="wow fadeIn text-center">A Visão do Lucas</h2>
+                                <div class="de-separator"></div>
+                                <p>Com mais de 16 anos de trajetória na barbearia — iniciada no Uruguai e consolidada em referências como Barbearia Paulistana, Barbearia Tarantino e Barbearia Trezentos — Lucas Picón carrega uma visão clara: a barbearia deve ser um espaço de excelência, onde cada cliente é tratado como único. Hoje, toda essa bagagem chega a Amparo, trazendo atendimento de excelência, estilo, personalidade e cuidado em cada detalhe.</p>
+                                <div class="d-deco"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6" data-jarallax-element="-100">
+                            <div class="d-sch-table">
+                                <h2 class="wow fadeIn text-center">A Missão</h2>
+                                <div class="de-separator"></div>
+                                <p>Nossa missão é entregar resultado em cada atendimento — seja um corte impecável, uma barba com acabamento perfeito ou uma barbaterapia que deixa o cliente renovado. Atendimento personalizado em ambiente acolhedor, seguindo a linha clássica da barbearia com técnicas modernas. Porque cuidar da aparência não é luxo — é respeito próprio.</p>
+                                <div class="d-deco"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-gradient-edge-bottom"></div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- PROFISSIONAL — About Lucas (from profissional.html + sobre.html) -->
+            <!-- ============================================================ -->
+            <section class="no-top jarallax">
+                <div class="de-gradient-edge-top"></div>
+                <img src="images/background/3.jpg" class="jarallax-img" alt="">
+                <div class="container relative z1000">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5" data-jarallax-element="-30">
+                            <div class="lp-profissional-box">
+                                <div class="de-box-a">
+                                    <div class="d-image">
+                                        <img src="images/lucas-2.jpg" alt="Lucas Picón">
+                                    </div>
+                                    <div class="d-deco-1"></div>
+                                    <div class="d-deco-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7" data-jarallax-element="-60">
+                            <h2 class="wow fadeInRight" data-wow-delay=".3s">Lucas <span class="id-color">Picón</span>
+                            </h2>
+                            <h4 class="wow fadeInRight" data-wow-delay=".35s" style="opacity:.6; font-weight:400;">
+                                Fundador — El Tigre Barber House Studio</h4>
+                            <p class="wow fadeInRight" data-wow-delay=".4s">Com mais de 16 anos de trajetória na barbearia, Lucas Picón iniciou sua carreira no Uruguai e construiu uma sólida experiência em grandes referências do segmento. Atuou como barbeiro sênior na tradicional Barbearia Paulistana, na capital paulista, integrou o time da Barbearia Tarantino, na zona sul de São Paulo, e também foi barbeiro sênior e gerente da unidade da Barbearia Trezentos, no Shopping de Campinas.
+
+                                Hoje, toda essa bagagem, técnica e conhecimento são trazidos para Amparo, cidade onde decidiu criar raízes e oferecer muito mais do que um simples corte de cabelo ou barba: uma experiência única, marcada por atendimento de excelência, estilo, personalidade e cuidado em cada detalhe.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-gradient-edge-bottom"></div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- ATENDIMENTO PERSONALIZADO (from index-2.html) -->
+            <!-- ============================================================ -->
+            <section class="no-top jarallax">
+                <div class="de-gradient-edge-top"></div>
+                <img src="images/background/8.jpg" class="jarallax-img" alt="">
+                <div class="container relative z1000">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6" data-jarallax-element="-30">
+                            <img src="images/misc/man-2.png" class="img-fluid wow fadeInRight" alt="">
+                        </div>
+                        <div class="col-lg-6" data-jarallax-element="-60">
+                            <h2 class="wow fadeInRight" data-wow-delay=".3s">Atendimento <span
+                                    class="id-color">Personalizado</span> com Mais de 16 Anos de Experiência</h2>
+                            <p class="wow fadeInRight" data-wow-delay=".4s">No El Tigre, não tem "um atende, outro
+                                acaba". É só o Lucas: do início ao fim, com a mesma atenção e cuidado. Cada corte, cada
+                                barba, cada procedimento é feito por mãos que têm mais de 16 anos de experiência — e que
+                                tratam cada cliente como único.</p>
+                            <a href="https://wa.me/5511955005110" target="_blank" class="btn-main wow fadeInRight"
+                                data-wow-delay=".5s">Agendar pelo WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-gradient-edge-bottom"></div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- SERVIÇOS — Service Cards (from index-2.html + servicos.html) -->
+            <!-- ============================================================ -->
+            <span class="lp-anchor" id="servicos"></span>
+            <section aria-label="section" class="no-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 class="wow fadeIn">Nossos Serviços</h2>
+                            <div class="de-separator"></div>
+                            <div class="lp-section-intro">
+                                <p>Cada serviço no El Tigre é executado pelo Lucas Picón. Aqui não tem divisão de
+                                    funções: quem te atende é quem termina. Atendimento individual, sem pressa, com a
+                                    atenção que só um profissional dedicado consegue dar.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 text-center" data-jarallax-element="-20">
+                            <div class="de-box-a">
+                                <div class="d-image">
+                                    <img src="images/services/1.jpg" alt="Barbaterapia - Lucas Picón">
+                                </div>
+                                <div class="d-deco-1"></div>
+                                <div class="d-deco-2"></div>
+                            </div>
+                            <div class="spacer-20"></div>
+                            <h4>Cortes e Acabamentos</h4>
+                        </div>
+
+                        <div class="col-lg-3 text-center" data-jarallax-element="-60">
+                            <div class="de-box-a">
+                                <div class="d-image">
+                                    <img src="images/services/2.jpg" alt="Barba">
+                                </div>
+                                <div class="d-deco-1"></div>
+                                <div class="d-deco-2"></div>
+                            </div>
+                            <div class="spacer-20"></div>
+                            <h4>Barba e Barbaterapia</h4>
+                        </div>
+
+                        <div class="col-lg-3 text-center" data-jarallax-element="-40">
+                            <div class="de-box-a">
+                                <div class="d-image">
+                                    <img src="images/services/3.jpg" alt="Tratamentos - Tintura e Botox">
+                                </div>
+                                <div class="d-deco-1"></div>
+                                <div class="d-deco-2"></div>
+                            </div>
+                            <div class="spacer-20"></div>
+                            <h4>Tratamentos</h4>
+                        </div>
+
+                        <div class="col-lg-3 text-center" data-jarallax-element="-10">
+                            <div class="de-box-a">
+                                <div class="d-image">
+                                    <img src="images/services/4.jpg" alt="Combos">
+                                </div>
+                                <div class="d-deco-1"></div>
+                                <div class="d-deco-2"></div>
+                            </div>
+                            <div class="spacer-20"></div>
+                            <h4>Combos</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- SERVIÇOS E PREÇOS -->
+            <!-- ============================================================ -->
+            <section class="jarallax no-top lp-pricing">
+                <div class="de-gradient-edge-top"></div>
+                <img src="images/background/5.jpg" class="jarallax-img" alt="">
+                <div class="container relative z1000">
+                    <div class="row g-4">
+                        <!-- Cortes e Acabamentos -->
+                        <div class="col-lg-6 item">
+                            <div class="d-sch-table">
+                                <h3 class="text-center" style="font-size:22px;">Cortes e Acabamentos</h3>
+                                <div class="sc-wrap">
+                                    <div class="def-list-dots">
+                                        <dl>
+                                            <dt><span>Corte</span></dt>
+                                            <dd>R$ 50,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Passar máquina (único pente)</span></dt>
+                                            <dd>R$ 25,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Limpeza de sobrancelha com navalha e máquina</span></dt>
+                                            <dd>R$ 20,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Pezinho</span></dt>
+                                            <dd>R$ 20,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Depilação de nariz</span></dt>
+                                            <dd>R$ 25,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Depilação de orelha</span></dt>
+                                            <dd>R$ 25,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Combo depilação de nariz e orelha</span></dt>
+                                            <dd>R$ 40,00</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="d-deco"></div>
+                            </div>
+                        </div>
+
+                        <!-- Barba -->
+                        <div class="col-lg-6 item">
+                            <div class="d-sch-table">
+                                <h3 class="text-center" style="font-size:22px;">Barba</h3>
+                                <div class="sc-wrap">
+                                    <div class="def-list-dots">
+                                        <dl>
+                                            <dt><span>Barba simples (máquina, tesoura e navalha com creme)</span></dt>
+                                            <dd>R$ 40,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Barba com vapor de ozônio e ervas (sem toalha quente)</span></dt>
+                                            <dd>R$ 50,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Barbaterapia (vapor de ozônio e ervas medicinais, toalha quente, massagem facial, hidratação de barba com balm e óleo + esfoliação)</span></dt>
+                                            <dd>R$ 75,00</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="d-deco"></div>
+                            </div>
+                        </div>
+
+                        <!-- Combos -->
+                        <div class="col-lg-6 item">
+                            <div class="d-sch-table">
+                                <h3 class="text-center" style="font-size:22px;">Combos</h3>
+                                <div class="sc-wrap">
+                                    <div class="def-list-dots">
+                                        <dl>
+                                            <dt><span>Combo: Corte e Barba simples</span></dt>
+                                            <dd>R$ 90,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Combo: Corte + Barbaterapia</span></dt>
+                                            <dd>R$ 115,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Combo: Corte + Barbaterapia + Sobrancelha</span></dt>
+                                            <dd>R$ 120,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Combo: Corte + Barbaterapia + Sobrancelha + Depilação de nariz e orelha</span></dt>
+                                            <dd>R$ 150,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Combo Botox: Corte de cabelo + Barbaterapia + Botox</span></dt>
+                                            <dd>R$ 170,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Combo Premium: Corte com hidratação + Barbaterapia + Sobrancelha + Depilação de nariz e orelha + Massoterapia em membros superiores e facial</span></dt>
+                                            <dd>R$ 200,00</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="d-deco"></div>
+                            </div>
+                        </div>
+
+                        <!-- Tratamentos -->
+                        <div class="col-lg-6 item">
+                            <div class="d-sch-table">
+                                <h3 class="text-center" style="font-size:22px;">Tratamentos</h3>
+                                <div class="sc-wrap">
+                                    <div class="def-list-dots">
+                                        <dl>
+                                            <dt><span>Tintura de cabelo</span></dt>
+                                            <dd>R$ 50,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Tintura de barba</span></dt>
+                                            <dd>R$ 50,00</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>Botox capilar</span></dt>
+                                            <dd>R$ 65,00</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="d-deco"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer-single"></div>
+                    <p class="text-center" style="opacity:.5; font-size:13px; font-style:italic;">Valores sujeitos a alterações.</p>
+                    <div class="text-center">
+                        <a href="https://wa.me/5511955005110" target="_blank" class="btn-main">Agendar pelo WhatsApp</a>
+                    </div>
+                </div>
+                <div class="de-gradient-edge-bottom"></div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- GALERIA — Full Gallery (from galeria.html) -->
+            <!-- ============================================================ -->
+            <span class="lp-anchor" id="galeria"></span>
+            <section id="section-gallery" class="no-top">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2 text-center">
+                            <h2 class="wow fadeIn">Galeria</h2>
+                            <div class="de-separator"></div>
+                            <div class="spacer-single"></div>
+                        </div>
+                    </div>
+                    <div id="gallery-lp" class="row g-3">
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-1.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Corte clássico com degradê</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-1.jpg" class="lazy img-fluid" alt="Corte clássico com degradê">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-2.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Barboterapia com toalha quente</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-2.jpg" class="lazy img-fluid" alt="Barboterapia com toalha quente">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-3.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Corte moderno - fade</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-3.jpg" class="lazy img-fluid" alt="Corte moderno - fade">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-4.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Modelagem de barba</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-4.jpg" class="lazy img-fluid" alt="Modelagem de barba">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-5.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Rapado com navalha</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-5.jpg" class="lazy img-fluid" alt="Rapado com navalha">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-6.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Ambiente retrô El Tigre</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-6.jpg" class="lazy img-fluid" alt="Ambiente retrô El Tigre">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-7.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Corte infantil</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-7.jpg" class="lazy img-fluid" alt="Corte infantil">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-8.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Terapia capilar</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-8.jpg" class="lazy img-fluid" alt="Terapia capilar">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-9.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Prótese capilar - resultado</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-9.jpg" class="lazy img-fluid" alt="Prótese capilar - resultado">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-10.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Corte com tesoura</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-10.jpg" class="lazy img-fluid" alt="Corte com tesoura">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-11.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Detalhes do ambiente</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-11.jpg" class="lazy img-fluid" alt="Detalhes do ambiente">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-12.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Corte degradê cacheado</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-12.jpg" class="lazy img-fluid" alt="Corte degradê cacheado">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-13.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Barboterapia completa</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-13.jpg" class="lazy img-fluid" alt="Barboterapia completa">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-14.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Atendimento personalizado</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-14.jpg" class="lazy img-fluid" alt="Atendimento personalizado">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-15.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Tratamento capilar</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-15.jpg" class="lazy img-fluid" alt="Tratamento capilar">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-16.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Corte e barba combinados</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-16.jpg" class="lazy img-fluid" alt="Corte e barba combinados">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-17.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Ambiente El Tigre</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-17.jpg" class="lazy img-fluid" alt="Ambiente El Tigre">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 item">
+                            <div class="de-image-hover rounded">
+                                <a href="images/gallery/gallery-item-18.jpg" class="image-popup">
+                                    <span class="dih-title-wrap">
+                                        <span class="dih-title">Resultado final - corte clássico</span>
+                                    </span>
+                                    <span class="dih-overlay"></span>
+                                    <img src="images/gallery/gallery-item-18.jpg" class="lazy img-fluid" alt="Resultado final - corte clássico">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- MARQUEE — Service Names Scrolling (from index-2.html) -->
+            <!-- ============================================================ -->
+            <section aria-label="section" class="no-top">
+                <div class="wow fadeInRight d-flex">
+                    <div class="de-marquee-list wow">
+                        <div class="d-item">
+                            <span class="d-item-txt">Cortes</span>
+                            <span class="d-item-display">
+                                <i class="d-item-block"></i>
+                            </span>
+                            <span class="d-item-txt">Barba</span>
+                            <span class="d-item-display">
+                                <i class="d-item-block"></i>
+                            </span>
+                            <span class="d-item-txt">Barbaterapia</span>
+                            <span class="d-item-display">
+                                <i class="d-item-block"></i>
+                            </span>
+                            <span class="d-item-txt">Tintura</span>
+                            <span class="d-item-display">
+                                <i class="d-item-block"></i>
+                            </span>
+                            <span class="d-item-txt">Botox Capilar</span>
+                            <span class="d-item-display">
+                                <i class="d-item-block"></i>
+                            </span>
+                            <span class="d-item-txt">Depilação</span>
+                            <span class="d-item-display">
+                                <i class="d-item-block"></i>
+                            </span>
+                            <span class="d-item-txt">Combos</span>
+                            <span class="d-item-display">
+                                <i class="d-item-block"></i>
+                            </span>
+                            <span class="d-item-txt">Sobrancelha</span>
+                            <span class="d-item-display">
+                                <i class="d-item-block"></i>
+                            </span>
+                            <span class="d-item-txt">Amparo-SP</span>
+                            <span class="d-item-display">
+                                <i class="d-item-block"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- DEPOIMENTOS — Testimonials (from depoimentos.html) -->
+            <!-- ============================================================ -->
+            <span class="lp-anchor" id="depoimentos"></span>
+            <section class="no-top" aria-label="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 class="wow fadeIn">O que Dizem Nossos Clientes</h2>
+                            <div class="de-separator"></div>
+                            <div class="spacer-single"></div>
+                        </div>
+                    </div>
+                    <div class="row lp-testi-grid g-4" style="align-items: stretch;">
+                        <div class="col-lg-4 item mb10">
+                            <div class="de_testi">
+                                <blockquote>
+                                    <p>Primeira vez no El Tigre e já virei cliente fiel. O Lucas me ouviu, entendeu
+                                        exatamente o que eu queria e entregou um corte clássico impecável. O ambiente
+                                        retrô é outro nível — parece que o tempo parou. Saí de lá se sentindo renovado.
+                                    </p>
+                                    <div class="de_testi_by">
+                                        <img alt="Foto do cliente Marcos Silva" class="rounded-circle" src="images/people/1.jpg"><span>Marcos
+                                            Silva</span>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 item mb10">
+                            <div class="de_testi">
+                                <blockquote>
+                                    <p>Sou cliente do Lucas há mais de 3 anos e nunca me decepcionei. O atendimento é
+                                        sempre personalizado, sem pressa. A barboterapia com toalha quente é viciante —
+                                        relaxa demais. Recomendo de olhos fechados.
+                                    </p>
+                                    <div class="de_testi_by">
+                                        <img alt="Foto do cliente Paulo Henrique" class="rounded-circle" src="images/people/2.jpg"><span>Paulo
+                                            Henrique</span>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 item mb10">
+                            <div class="de_testi">
+                                <blockquote>
+                                    <p>Como quem tem cabelo cacheado, sempre tive dificuldade pra encontrar um barbeiro
+                                        que entendesse. O Lucas é craque: entendeu meu cacho na primeira consulta e me
+                                        deu um degradê cacheado perfeito. Top demais.
+                                    </p>
+                                    <div class="de_testi_by">
+                                        <img alt="Foto do cliente André Souza" class="rounded-circle" src="images/people/3.jpg"><span>André
+                                            Souza</span>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 item mb10">
+                            <div class="de_testi">
+                                <blockquote>
+                                    <p>Levei meu filho pro primeiro corte e o Lucas foi sensacional com ele. Paciência,
+                                        carinho, zero estresse. O garoto saiu orgulhoso do visual e já quer voltar.
+                                        Muito obrigado, Lucas!
+                                    </p>
+                                    <div class="de_testi_by">
+                                        <img alt="Foto do cliente Juliana Martins" class="rounded-circle" src="images/people/4.jpg"><span>Juliana
+                                            Martins</span>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 item mb10">
+                            <div class="de_testi">
+                                <blockquote>
+                                    <p>O El Tigre é a melhor barbearia de Amparo. O atendimento personalizado e o ambiente acolhedor fazem toda a diferença. Cada visita é uma experiência que vale a pena. Sem dúvida, o melhor investimento em autoestima.</p>
+                                    <div class="de_testi_by">
+                                        <img alt="Foto do cliente Gustavo Rocha" class="rounded-circle" src="images/people/5.jpg"><span>Gustavo
+                                            Rocha</span>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 item mb10">
+                            <div class="de_testi">
+                                <blockquote>
+                                    <p>A barbaterapia que o Lucas faz é simplesmente impecável.
+                                        O vapor de ozônio, a toalha quente, a massagem facial — é outra dimensão. O resultado
+                                        é impecável. O atendimento vale cada centavo.</p>
+                                    <div class="de_testi_by">
+                                        <img alt="Foto do cliente Bruno Cardoso" class="rounded-circle" src="images/people/6.jpg"><span>Bruno
+                                            Cardoso</span>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- HORÁRIO + LOCALIZAÇÃO (from index-2.html / servicos.html) -->
+            <!-- ============================================================ -->
+            <section class="jarallax no-top">
+                <div class="de-gradient-edge-top"></div>
+                <img src="images/background/7.jpg" class="jarallax-img" alt="">
+                <div class="container relative z1000">
+                    <div class="row gx-5 lp-info-row" style="align-items: stretch;">
+                        <div class="col-lg-6 text-center" data-jarallax-element="-50">
+                            <div class="d-sch-table">
+                                <h2 class="wow fadeIn">Horário de Funcionamento</h2>
+                                <div class="de-separator"></div>
+                                <div class="d-col">
+                                    <div class="d-title">Ter - Sáb</div>
+                                    <div class="d-content id-color">08:00 - 20:00</div>
+                                </div>
+                                <div class="d-col">
+                                    <div class="d-title">Domingo</div>
+                                    <div class="d-content id-color">09:00 - 17:00 (com horário marcado)</div>
+                                </div>
+                                <div class="d-deco"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 text-center" data-jarallax-element="-100">
+                            <div class="d-sch-table">
+                                <h2 class="wow fadeIn">Localização</h2>
+                                <div class="de-separator"></div>
+                                <div class="d-col">
+                                    <div class="d-title">Endereço</div>
+                                    <div class="d-content id-color">Amparo - SP</div>
+                                </div>
+                                <div class="d-col">
+                                    <div class="d-title">Telefone</div>
+                                    <div class="d-content id-color">(11) 95500-5110</div>
+                                </div>
+                                <div class="d-col">
+                                    <div class="d-title">Instagram</div>
+                                    <div class="d-content id-color"><a href="https://www.instagram.com/eltigrebarberhouse"
+                                            target="_blank"
+                                            style="color:inherit;text-decoration:none;">@eltigrebarberhouse</a></div>
+                                </div>
+                                <div class="d-deco"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-gradient-edge-bottom"></div>
+            </section>
+
+            <!-- ============================================================ -->
+            <!-- CONTATO — Contact Form + Info (from contato.html) -->
+            <!-- ============================================================ -->
+            <span class="lp-anchor" id="contato"></span>
+            <section class="no-top" aria-label="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 class="wow fadeIn">Entre em Contato</h2>
+                            <div class="de-separator"></div>
+                            <div class="spacer-single"></div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info Icons -->
+                    <div class="row mb-5">
+                        <div class="col-lg-4 col-md-4 text-center">
+                            <a href="https://maps.app.goo.gl/oaAJn1b6pButCz9w9" target="_blank"
+                                style="text-decoration:none;"><i
+                                    class="fa fa-map-marker de-icon gradient de-hover-scale text-light mb20"></i></a>
+                            <p class="lead no-bottom">Localização</p>
+                            <h4 class="s2">Amparo - SP</h4>
+                        </div>
+                        <div class="col-lg-4 col-md-4 text-center">
+                            <a href="https://wa.me/5511955005110" target="_blank" style="text-decoration:none;"><i
+                                    class="fa fa-whatsapp de-icon gradient de-hover-scale text-light mb20"></i></a>
+                            <p class="lead no-bottom">Telefone</p>
+                            <h4 class="s2"><a href="https://wa.me/5511955005110" target="_blank"
+                                    style="color:inherit;text-decoration:none;">(11) 95500-5110</a></h4>
+                        </div>
+                        <div class="col-lg-4 col-md-4 text-center">
+                            <a href="https://www.instagram.com/eltigrebarberhouse" target="_blank"
+                                style="text-decoration:none;"><i
+                                    class="fa fa-instagram de-icon gradient de-hover-scale text-light mb20"></i></a>
+                            <p class="lead no-bottom">Instagram</p>
+                            <h4 class="s2"><a href="https://www.instagram.com/eltigrebarberhouse" target="_blank"
+                                    style="color:inherit;text-decoration:none;">@eltigrebarberhouse</a></h4>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="lp-google-map">
+                                <iframe
+                                    src="https://maps.google.com/maps?q=El%20Tigre%20Barber%20House%20Studio&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================================ -->
+                    <!-- FOOTER -->
+                </div>
+            </section>
+
+        </div>
+        <!-- content close -->
+
+        <!-- WhatsApp Float Button -->
+        <a href="https://wa.me/5511955005110" target="_blank" class="lp-whatsapp-float"
+            title="Fale conosco pelo WhatsApp">
+            <i class="fa fa-whatsapp"></i>
+        </a>
+
+
+        <!-- footer begin -->
+        <footer>
+            <div class="container">
+                <div class="text-center">
+                    <img src="images/logo.png" class="footer-logo" alt="El Tigre Barber House Studio">
+                    <div class="footer-logo-text">
+                        <span class="footer-logo-main">El Tigre</span>
+                        <span class="footer-logo-sub">Barber House Studio</span>
+                    </div>
+                    <div class="spacer-single"></div>
+                    © 2026 - El Tigre - Barber House Studio
+                    <div class="fsousa-credit">Website construído por <a href="https://fsousa.com.br"
+                            target="_blank"><img src="images/logo-fsousa.svg" alt="FSOUSA SOLUÇÕES"
+                                style="height: 16px; width: auto; vertical-align: middle;"></a></div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+    </div>
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/fsousa.js"></script>
+    <script src="js/custom-marquee.js"></script>
+
+</body>
+
+</html>
